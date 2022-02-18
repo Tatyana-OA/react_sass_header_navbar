@@ -1,0 +1,18 @@
+@import "./variables.scss";
+
+* {
+    box-sizing:border-box;
+    margin: 0;
+}
+
+// Font is set as variable in variables file and imported into the index.
+body {
+    width:100%;
+    font-family: $Poppins;
+    color: $dark;
+}
+
+
+#root {
+    height:100%;
+}
