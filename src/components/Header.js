@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom'
+
 import classes from './Header.module.scss';
 
 import {BiMenuAltRight} from 'react-icons/bi';
@@ -40,16 +42,16 @@ const Header = () => {
         <nav className={`${classes.header__content__nav} ${menuOpen ? classes.isMenu : ""}`}>
             <ul>
                 <li>
-                    <a href="/">Page1</a>
+                    <Link to="/one">Page1</Link>
                 </li>
                 <li>
-                    <a href="/">Page2</a>
+                    <Link to="/two">Page2</Link>
                 </li>
                 <li>
-                    <a href="/">Page3</a>
+                    <Link to="/three">Page3</Link>
                 </li>
             </ul>
-            <button>CTA Page</button>
+            <Link to="/cta"> <button>CTA Page</button> </Link>
         </nav>
         <div className={classes.header__content__toggle}>
            { !menuOpen ? <BiMenuAltRight onClick={menuToggleHandler}/> : <AiOutlineClose onClick={menuToggleHandler} />}
